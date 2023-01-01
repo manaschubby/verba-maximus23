@@ -1,13 +1,19 @@
+:root{
+    --color1: rgb(250, 200, 200);
+    --color2: rgb(60, 10, 8);
+    --color2Blur: rgba(60, 10, 8, 0.4);
+}
 .navbar{
     width: 100vw;
     height: 10vw;
-    background-color: rgb(250, 200, 200);
-    /* position: fixed;
+    background-color: var(--color1);
+    position: fixed;
     top:0;
-    left:0; */
+    left:0;
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 0px 20px rgba(60, 10, 8, 0.4);
+    box-shadow: 0px 0px 20px var(--color2Blur);
+    z-index: 100;
 }
 .logo{
     width: 10vw;
@@ -24,16 +30,16 @@
     justify-content: space-evenly;
 }
 .element{
-    color: rgb(60, 10, 8);
+    color: var(--color2);
     font-size: 1.8vw;
-    text-shadow: 0px 5px 20px rgb(60, 10, 8);
+    text-shadow: 0px 5px 20px var(--color2);
 }
 .register{
     padding: 1vw 2vw;
-    background-color: rgb(60, 10, 8);
-    color: rgb(242, 202, 200);
+    background-color: var(--color2);
+    color: var(--color1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(60, 10, 8, 0.4);
+    box-shadow: 0px 5px 20px var(--color2Blur);
 }

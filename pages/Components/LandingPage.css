@@ -1,0 +1,28 @@
+:root{
+    --color1: rgb(250, 200, 200);
+    --color2: rgb(60, 10, 8);
+    --color2Blur: rgba(60, 10, 8, 0.4);
+}
+.title{
+    font-size: 7vw;
+    color:white;
+    /* background-image: url("/Images/images.png"); */
+    width: max-content;
+    padding: 10px;
+    background-size: cover;
+    mix-blend-mode: difference;
+}
+.sub-title{
+    font-size: 4vw;
+    color: white;
+    mix-blend-mode: difference;
+}
+.title-image{
+    position:sticky;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    image-rendering: optimizeSpeed;
+    background-image: url("/VM.jpeg");
+    background-repeat: no-repeat;
+}
