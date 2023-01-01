@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import EventDetails from './Components/EventDetails'
 import EventsPage from './Components/EventsPage'
 import LandingPage from './Components/LandingPage'
+import NavBar from './Components/NavBar/NavBar'
 
 
 export default function Home() {
@@ -16,7 +17,9 @@ export default function Home() {
         <meta name="description" content="Official website for VM '23" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+    
       <BrowserRouter>
+      <NavBar/>
         <Routes>
           <Route path="/events" element={<EventsPage/>}></Route>
           <Route path="/" element={<LandingPage/>}></Route>
