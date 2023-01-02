@@ -5,24 +5,33 @@
 }
 .title{
     font-size: 7vw;
-    color:white;
+    color:var(--color2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-image: url("/Images/images.png"); */
     width: max-content;
     padding: 10px;
     background-size: cover;
     mix-blend-mode: difference;
+    text-shadow: 0px 5px 50px var(--color2);
 }
 .sub-title{
     font-size: 4vw;
     color: white;
     mix-blend-mode: difference;
+    text-shadow: 0px 5px 20px var(--color2);
 }
 .title-image{
     position:sticky;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
+    background-color: rgb(265, 200, 200);
+    backdrop-filter: blur(10);
+    /* background-size: cover;
+    background-position: center;
     image-rendering: optimizeSpeed;
-    background-image: url("/VM.jpeg");
-    background-repeat: no-repeat;
+    background-image: url("/VM.jpeg"); */
+    /* background-repeat: no-repeat; */
+}
+.scroll2-title{
+    font-size: 7vw;
 }

@@ -16,7 +16,7 @@ const LandingPage = () => {
         <div>
             <ScrollContainer>
                 <ScrollPage>
-                    <Animator animation={batch(Sticky(50,55),Fade())}>
+                    <Animator animation={batch(Sticky(),Fade())}>
                         <div className='title-image' />
                     </Animator>
                     <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -20))}>
@@ -27,41 +27,48 @@ const LandingPage = () => {
                     </Animator>                
                 </ScrollPage>
                 <ScrollPage>
-                    <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-                    <span style={{ fontSize: "30px" }}>Let me show you scroll animation 😀</span>
-                    </Animator>
-                </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={ZoomInScrollOut}>
-                    <span style={{ fontSize: "40px" }}>I'm FadeUpScrollOut ✨</span>
-                    </Animator>
-                </ScrollPage>
-                <ScrollPage>
                     <Animator animation={FadeUp}>
-                    <span style={{ fontSize: "40px" }}>I'm FadeUp ⛅️</span>
+                        <div classname="scroll2-title" style={{ fontSize: "10vw" }}>Metamorphosis</div>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage>
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
-                    <span style={{ fontSize: "40px" }}>
-                        <Animator animation={MoveIn(-1000, 0)}>Hello Guys 👋🏻</Animator>
-                        <Animator animation={MoveIn(1000, 0)}>Nice to meet you 🙋🏻‍♀️</Animator>
-                        - I'm Dante Chun -
-                        <Animator animation={MoveOut(1000, 0)}>Good bye ✋🏻</Animator>
-                        <Animator animation={MoveOut(-1000, 0)}>See you 💛</Animator>
-                    </span>
-                    </div>
-                </ScrollPage>
-                <ScrollPage>
-                    <Animator animation={batch(Fade(), Sticky())}>
-                    <span style={{ fontSize: "40px" }}>Done</span>
-                    <br/>
-                    <span style={{ fontSize: "30px" }}>
-                        There's FadeAnimation, MoveAnimation, StickyAnimation, ZoomAnimation
-                    </span>
-                    </Animator>
-                </ScrollPage>
+
+                    <Animator animation={batch(MoveIn(-1000, 0), Sticky(40, 50), Fade())}>EVENTS</Animator>
+                
+                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"50%"}}>Event 1</div>
+                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"55%"}}>Event 1</div>
+                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"60%"}}>Event 1</div>
+                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"65%"}}>Event 1</div>
+                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"70%"}}>Event 1</div>
+            </ScrollPage>
+                    {/* <Animator animation={batch(MoveIn(0,400),Sticky(50,60))}><div>Event 1</div></Animator>
+                
+                    <Animator animation={batch(MoveIn(0,300),Sticky(50,65))}><div>Event 1</div></Animator>
+                
+                    <Animator animation={batch(MoveIn(0,200),Sticky(50,70))}><div>Event 1</div></Animator>
+                
+                    <Animator animation={batch(MoveIn(0,100),Sticky(50,75))}><div>Event 1</div></Animator>
+                 */}
             </ScrollContainer>
+            <div style={{ marginTop: "0vw" }}><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
+            <div><h1>contact</h1></div>
         </div>
     );
 }
