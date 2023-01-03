@@ -8,13 +8,13 @@ const NavBar = () => {
             <Link to="/" relative="path"><img src="/VM.jpeg" className='logo'/></Link>
             <div className='headers'>
                 <div className='element'> 
-                    <a href='/#main'>Home</a>
+                    <Link href='/#main'>Home</Link>
                 </div>
                 <div className='element'>
-                    <a href='/#events'>Events</a>
+                    <Link href='/#events'>Events</Link>
                 </div>
                 <div className='element'>
-                    <a href='/#contact'>Contact Us</a>
+                    <Link href='/#contact'>Contact Us</Link>
                 </div>
                 <div className='element'>
                     <Link className='register' to='register' href='/register'>Register</Link>
