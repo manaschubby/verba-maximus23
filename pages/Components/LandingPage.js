@@ -67,9 +67,9 @@ const LandingPage = () => {
                 </div>
             </section>
             <section id="contact">
-                <div className='landing-events' style={{marginTop:"10vh"}}>
+                <div className='landing-events' style={{ marginTop:"10vh"}}>
                     <div className='sub-heading-title'>Contact Us</div>
-                    <div style={{marginTop:"1%"}} className='landing-cards'>
+                    <div style={{display:"flex", flexDirection:"column", alignItems:"center", marginTop:"1%", height:"60vh", backgroundImage: "url(/metamorphosisLogo.svg)",backgroundSize: 'contain', backgroundPositionX:"left",backgroundPositionY:"top", backgroundRepeat: 'no-repeat'}} className='landing-cards'>
                         <div className='landing-card'>
                         <div className='card-title'>
                            <b> ELAS BPHC</b>
@@ -122,7 +122,7 @@ const TitleComponent = () => {
                     </Animator>
                 </ScrollPage>
                 <section id="schedule"><ScrollPage style={{backgroundColor:"rgb(60, 10, 8)"}}>
-                    <Animator animation={batch(Fade(), Move(), Sticky(!isMobile ? 25 : 50, !isMobile ? 40: 20))}>
+                    <Animator animation={batch(Fade(),Move(), Sticky(!isMobile ? 25 : 50, !isMobile ? 40: 20))}>
                         <div style={{
                             display:"flex",
                             flexDirection:"column",
@@ -134,11 +134,35 @@ const TitleComponent = () => {
                     </Animator><span style={{
                                 color:"white"
                             }}>
-                    {!isMobile&&!lowHeight ?
-                        // <Animator animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 55 : 50,!isMobile ? 10 : 50))}>
-                        //         <h1>Hey</h1>
-                        // </Animator> 
-                        <></>:
+                    {!isMobile&&!lowHeight ?<>
+                        <Animator style={{width:"20%"}} animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 55 : 50,!isMobile ? 20 : 50))}>
+                                <h4 style={{ fontWeight:"lighter", textAlign:"right"}}>1-6 May, 2021</h4>
+                                <h1 style={{ textAlign:"right"}}>Registration</h1>
+                                <h3 style={{ fontWeight:"lighter", textAlign:"right"}}>Pick your favourite event(s) and register in that event by filling the form corresponding to that event. Its that easy :)</h3>
+                        </Animator>
+                        <Animator style={{width:"20%"}} animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 85 : 50,!isMobile ? 35 : 50))}>
+                                <h4 style={{ fontWeight:"lighter", textAlign:"left"}}>1-6 May, 2021</h4>
+                                <h1 style={{ textAlign:"left"}}>Participation</h1>
+                                <h3 style={{ fontWeight:"lighter", textAlign:"left"}}>Participate online. The links for your registered events will be sent to you via email and whatsapp groups. Use those links and show your talent.</h3>
+                        </Animator>
+                        <Animator style={{width:"20%"}} animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 55 : 50,!isMobile ? 50 : 50))}>
+                                <h4 style={{ fontWeight:"lighter", textAlign:"right"}}>1-6 May, 2021</h4>
+                                <h1 style={{ textAlign:"right"}}>Result Declaration</h1>
+                                <h3 style={{ fontWeight:"lighter", textAlign:"right"}}>The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the resukts will be announced on the whatsapp groups and will be mailed to you.</h3>
+                        </Animator>
+                        <Animator style={{width:"20%"}} animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 85 : 50,!isMobile ? 65 : 50))}>
+                                <h4 style={{ fontWeight:"lighter", textAlign:"left"}}>1-6 May, 2021</h4>
+                                <h1>Prize Distribution</h1>
+                                <h3 style={{ fontWeight:"lighter", textAlign:"left"}}>The winners will be contacted by our team for their addresses and the winning goodies will be sent at their addresses.</h3>
+                        </Animator>
+                        <Animator style={{width:"1%"}} animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 70 : 50,!isMobile ? 50 : 50))}>
+                                <div style={{backgroundColor:"white", height:"60vh", width:"0.5vw"}} />
+                        </Animator>
+                        <Animator animation={batch(MoveIn(0,1000), MoveOut(0,-1000), Sticky(!isMobile ? 70 : 50,!isMobile ? 80 : 50), )}>
+                            <img className="mx-auto -mt-36 md:-mt-36" src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" />
+                        </Animator>
+                         </>
+                        :
                         <></>
                         }</span>
                 </ScrollPage></section>
