@@ -37,7 +37,7 @@
     /* background-repeat: no-repeat; */
 }
 .landing-events{
-    margin-top: 60vh;
+    margin-top: 0vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,8 +55,8 @@
     margin: auto;
 }
 .landing-cards{
-    margin-top: 10vh;
-    width: 90vw;
+    margin-top: 5%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -67,16 +67,27 @@
     border-radius: 10px;
     margin: 30px;
     width: 400px;
-    height: 30vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(265, 200, 200);
 }
 .card-title{
-    padding: 3vh;
-    font-size: 2vw;
-
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.card-time{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.card-desc{
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    font-size: 20px;
 }
 @media (max-width: 1024px) {
     .title{

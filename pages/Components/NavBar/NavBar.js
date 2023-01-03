@@ -7,14 +7,14 @@ const NavBar = () => {
 
             <Link to="/" relative="path"><img src="/VM.jpeg" className='logo'/></Link>
             <div className='headers'>
-                <div className='element'>
-                    <Link to='/'>Home</Link>
+                <div className='element'> 
+                    <a href='/#main'>Home</a>
                 </div>
                 <div className='element'>
-                    <a href='#events'>Events</a>
+                    <a href='/#events'>Events</a>
                 </div>
                 <div className='element'>
-                    <Link to='/contact'>Contact Us</Link>
+                    <a href='/#contact'>Contact Us</a>
                 </div>
                 <div className='element'>
                     <Link className='register' to='register' href='/register'>Register</Link>
