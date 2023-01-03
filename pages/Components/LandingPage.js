@@ -46,11 +46,12 @@ const LandingPage = () => {
     return (
         <div>
             <TitleComponent />
+            <section id="events">
             <div className='landing-events' id="events">
                 <div className='sub-heading-title'>EVENTS</div>
                 <div className='landing-cards'>
-                    {events.map((event)=>{
-                        return(<div className='landing-card'>
+                    {events.map((event,i)=>{
+                        return(<div className='landing-card' key={i}>
                         <div className='card-title'>
                             {event.title}
                         </div>
@@ -63,7 +64,7 @@ const LandingPage = () => {
                     </div>)
                     })}
                 </div>
-            </div>
+            </div></section>
         </div>
     );
 }
@@ -72,7 +73,7 @@ const TitleComponent = () => {
     const FadeUp = batch(Fade(), Move(), Sticky());
     const [isMobile, setMobile] = useState(false);
     const [lowHeight, setLowHeight] = useState(false);
-    useEffect(() => setMobile(window.matchMedia("(max-width: 1024px)").matches), []);
+    useEffect(() => setMobile(window.matchMedia("(max-width: 1024px)").matches), [window.matchMedia("(max-width: 1024px)").matches]);
     useEffect(() => setLowHeight(window.matchMedia("(max-height: 500px)").matches), []);
     return (
             <ScrollContainer>
