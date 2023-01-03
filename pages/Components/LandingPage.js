@@ -5,72 +5,102 @@ const Animator = dynamic(
   import("react-scroll-motion").then((it) => it.Animator),
   { ssr: false }
 );
+import { useState, useEffect } from 'react';
 import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 "/Images/maxresdefault.jpg"
 const LandingPage = () => {
-    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-    const FadeUp = batch(Fade(), Move(), Sticky());
-
+    const events = [{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    },{
+        title:"Sherlocked",
+        desc:"sherlocked",
+        time:"at night"
+    }]
     return (
         <div>
+            <TitleComponent />
+            <div className='landing-events' id="events">
+                <div className='sub-heading-title'>EVENTS</div>
+                <div className='landing-cards'>
+                    {events.map((event)=>{
+                        return(<div className='landing-card'>
+                        <div className='card-title'>
+                            {event.title}
+                        </div>
+                        <div className='card-time'>
+                            <b>TIME</b>: {event.time}
+                        </div>
+                        <div className='card-desc'>
+                            {event.desc}
+                        </div>
+                    </div>)
+                    })}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const TitleComponent = () => {
+    const FadeUp = batch(Fade(), Move(), Sticky());
+    const [isMobile, setMobile] = useState(false);
+    const [lowHeight, setLowHeight] = useState(false);
+    useEffect(() => setMobile(window.matchMedia("(max-width: 1024px)").matches), []);
+    useEffect(() => setLowHeight(window.matchMedia("(max-height: 500px)").matches), []);
+    return (
             <ScrollContainer>
                 <ScrollPage>
                     <Animator animation={batch(Sticky(),Fade())}>
                         <div className='title-image' />
                     </Animator>
                     <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -20))}>
-                        <div className='title'>VÈRBA MAXIMUS 2023</div>
+                        <div className='title'>VÈRBA MAXIMUS {!isMobile ? <></> : <br/>}2023</div>
                     </Animator>
-                    <Animator animation={batch(Fade(), Sticky(50,60), MoveOut(0, -20))}>
+                    <Animator animation={batch(Fade(), Sticky(50,!lowHeight ? 60 : 80), MoveOut(0, -20))}>
                         <div className='sub-title'>28-29 JAN</div>
                     </Animator>                
                 </ScrollPage>
                 <ScrollPage>
                     <Animator animation={FadeUp}>
-                        <div classname="scroll2-title" style={{ fontSize: "10vw" }}>Metamorphosis</div>
+                        <div style={{
+                            display:"flex",
+                            flexDirection:"column",
+                            justifyContent:"center"
+                        }}>
+                        <div  style={{ fontSize:  !isMobile ? "10vw" : "7vh"}}>Metamorphosis</div>
+                        <div  style={{ fontSize: !isMobile ? "1.5vw": "2vh", marginTop: "6vh", textAlign:"center" }}>The English Language Activies Society is back again with the literary fest of the year here at <br/> BITS Pilani, Hyderabad Campus.</div>
+                        </div>
                     </Animator>
                 </ScrollPage>
-                <ScrollPage>
-
-                    <Animator animation={batch(MoveIn(-1000, 0), Sticky(40, 50), Fade())}>EVENTS</Animator>
-                
-                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"50%"}}>Event 1</div>
-                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"55%"}}>Event 1</div>
-                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"60%"}}>Event 1</div>
-                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"65%"}}>Event 1</div>
-                <div style={{fontSize:"3vw", position:"absolute", left:"50%", top:"70%"}}>Event 1</div>
-            </ScrollPage>
-                    {/* <Animator animation={batch(MoveIn(0,400),Sticky(50,60))}><div>Event 1</div></Animator>
-                
-                    <Animator animation={batch(MoveIn(0,300),Sticky(50,65))}><div>Event 1</div></Animator>
-                
-                    <Animator animation={batch(MoveIn(0,200),Sticky(50,70))}><div>Event 1</div></Animator>
-                
-                    <Animator animation={batch(MoveIn(0,100),Sticky(50,75))}><div>Event 1</div></Animator>
-                 */}
             </ScrollContainer>
-            <div style={{ marginTop: "0vw" }}><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-            <div><h1>contact</h1></div>
-        </div>
-    );
+    )
 }
 
 export default LandingPage;

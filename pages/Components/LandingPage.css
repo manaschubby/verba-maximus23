@@ -2,6 +2,9 @@
     --color1: rgb(250, 200, 200);
     --color2: rgb(60, 10, 8);
     --color2Blur: rgba(60, 10, 8, 0.4);
+    scrollbar-width: none;
+}::-webkit-scrollbar{
+    display: none;
 }
 .title{
     font-size: 7vw;
@@ -9,6 +12,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-image: url("/Images/images.png"); */
     width: max-content;
+    text-align: center;
     padding: 10px;
     background-size: cover;
     mix-blend-mode: difference;
@@ -32,6 +36,59 @@
     background-image: url("/VM.jpeg"); */
     /* background-repeat: no-repeat; */
 }
-.scroll2-title{
+.landing-events{
+    margin-top: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-heading-title{
+    position: -webkit-sticky;
+    position: sticky;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    top: 100px;
     font-size: 7vw;
+    color: var(--color2);
+    margin: auto;
+}
+.landing-cards{
+    margin-top: 10vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.landing-card{
+    border-radius: 10px;
+    margin: 30px;
+    width: 400px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(265, 200, 200);
+}
+.card-title{
+    padding: 3vh;
+    font-size: 2vw;
+
+}
+@media (max-width: 1024px) {
+    .title{
+        font-size: 5vh;
+    }
+    .sub-title{
+        font-size: 3vh;
+    }
+    .sub-heading-title{
+        font-size: 7vh;
+    }
+    .landing-card{
+        width: 600px;
+    }
 }
