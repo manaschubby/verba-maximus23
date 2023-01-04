@@ -5,19 +5,19 @@ const NavBar = () => {
     return (
         <div className='navbar'>
 
-            <Link to="/" relative="path"><img src="/VM.jpeg" className='logo'/></Link>
+            <a href='#main' relative="path"><img src="/VM.jpeg" className='logo'/></a>
             <div className='headers'>
                 <div className='element'> 
-                    <Link href='/#main'>Home</Link>
+                    <a href='/#main'>Home</a>
                 </div>
                 <div className='element'>
-                    <Link href='/#events'>Events</Link>
+                    <a href='/#events'>Events</a>
                 </div>
                 <div className='element'>
-                    <Link href='/#contact'>Contact Us</Link>
+                    <a href='/#contact'>Contact Us</a>
                 </div>
                 <div className='element'>
-                    <Link className='register' to='register' href='/register'>Register</Link>
+                    <a className='register' href='/register'>Register</a>
                 </div>
             </div>
         </div>

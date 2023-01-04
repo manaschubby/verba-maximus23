@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import styles from '../styles/Home.module.css'
-import EventDetails from './Components/EventDetails'
-import EventsPage from './Components/EventsPage'
 import LandingPage from './Components/LandingPage'
 import NavBar from './Components/NavBar/NavBar'
 
@@ -18,14 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <BrowserRouter>
       <NavBar/>
-        <Routes>
-          <Route path="/events" element={<EventsPage/>}></Route>
-          <Route path="/" element={<LandingPage/>}></Route>
-          <Route path="/event" element={<EventDetails/>}></Route>
-        </Routes>
-      </BrowserRouter>
+      <LandingPage />
+      
     </div>
   )
 }
