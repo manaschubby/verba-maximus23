@@ -1,5 +1,6 @@
 :root{
     --color1: rgb(250, 200, 200);
+    --color1Blur: rgba(250, 200, 200, 0.4);
     --color2: rgb(60, 10, 8);
     --color2Blur: rgba(60, 10, 8, 0.4);
     scrollbar-width: none;
@@ -55,7 +56,6 @@
     font-size: 7vw;
     color: var(--color2);
     margin: auto;
-    mix-blend-mode: difference;
 }
 .landing-cards{
     margin-top: 5%;
@@ -81,12 +81,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 40px;
-    
 }
 .card-time{
     text-align: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
     padding-top: 30px;
     padding-bottom: 10px;
     font-size: 20px;
@@ -100,6 +97,52 @@
     font-size: 20px;
     overflow: hidden;
 }
+.event-detail-card{
+    left: 10vw;
+    right: 10vw;
+    top: 10vh;
+    bottom: 10vh;
+    width: 80vw;
+    height: 80vh;
+    position: fixed;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vw;
+    z-index: 100;
+    box-shadow: 0px 0px 90px var(--color1Blur);
+    flex-wrap: nowrap;
+}
+.detail-title{
+    padding-top: 10%;
+    font-size: 7vh;
+    color: var(--color1);
+}
+.detail-time{
+    padding-top: 5vh;
+    font-size: 3vh;
+    color: white;
+}
+.detail-desc{
+    text-align: justify;
+    height: max-content;
+    width: 60vw;
+    padding-top: 5vh;
+    font-size: 2vh;
+    color: white;
+}
+.exit{
+    margin-top: 5vh;
+    font-size: large;
+    height: 10vh;
+    width: 10vw;
+    color: var(--color2);
+    border: none;
+    border-radius: 2vh;
+    box-shadow: 0px 0px 90px var(--color1Blur);
+    background-color: var(--color1);
+}
 @media (max-width: 1024px) {
     .title{
         font-size: 5vh;
@@ -112,5 +155,8 @@
     }
     .landing-card{
         width: 400px;
+    }
+    .exit{
+        width: 10vh;
     }
 }

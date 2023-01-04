@@ -1,15 +1,20 @@
 import React from 'react';
-import NavBar from './NavBar/NavBar';
 import dynamic from "next/dynamic";
 const Animator = dynamic(
   import("react-scroll-motion").then((it) => it.Animator),
   { ssr: false }
 );
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 "/Images/maxresdefault.jpg"
 const LandingPage = () => {
+    const [eventShown, setEventShown] = useState(false)
+    const [event, setEvent] = useState({
+        title:"",
+        time:"",
+        desc:""
+    })
     const events = [{
         title:"Sherlocked",
         desc:`There has been a murder on campus. In this evolving case that has roped in eight separate individuals, confusion has been the only constant. You are our only shot at solving this murder mystery. Interrogate and cross-examine the eight suspects as you attempt to uncover the truth at SHERLOCKED, VM 2O22, and help us crack the case!`,
@@ -44,15 +49,21 @@ const LandingPage = () => {
         desc:"sherlocked",
         time:"at night"
     }]
+    const showEvent = (index) => {
+        setEvent(events[index]);
+        setEventShown(true);
+        
+    }
     return (
         <div>
+            {eventShown && <EventDetail name={event.title} desc={event.desc} time={event.time} setEventShown={setEventShown} onClickOutside={()=>setEventShown(false)}></EventDetail>}
             <section id="main"><TitleComponent /></section>
             <section id="events">
                 <div className='landing-events' id="events">
                     <div className='sub-heading-title'>EVENTS</div>
-                    <div className='landing-cards'>
+                    <div className='landing-cards' >
                         {events.map((event,i)=>{
-                            return(<div className='landing-card' key={i}>
+                            return(<div className='landing-card'  onClick={()=>showEvent(i)}  key={i}>
                             <div className='card-title'>
                                 {event.title}
                             </div>
@@ -69,9 +80,9 @@ const LandingPage = () => {
             </section>
             <section id="contact">
                 <div className='landing-events' style={{ marginTop:"10vh" , backgroundColor:"black"}} >
-                    <div className='sub-heading-title' style={{color:"rgb(250, 200, 200)"}}>Contact Us</div>
+                    <div className='sub-heading-title' style={{fontSize:"8vh" ,color:"rgb(250, 200, 200)"}}>Contact Us</div>
                     <div style={
-                    {   
+                    {
                         display:"flex", 
                         flexDirection:"column", 
                         flexFlow:"wrap",
@@ -85,15 +96,15 @@ const LandingPage = () => {
                     }} 
                     className='landing-cards'
                     >
-                        <div className='landing-card' style={{backgroundColor:"white",color:"black"}}>
+                        <div className='landing-card' style={{background:"none", color:"black"}}>
                         <div style={{}} className='card-title'>
                            <b> ELAS BPHC</b>
                         </div>
                         <div className='card-time'>
-                            Email : <a style={{opacity:0.5, color:"rgb(60, 10, 8)"}} href='mailto:elas@hyderabad.bits-pilani.ac.in'>elas@hyderabad.bits-pilani.ac.in</a>
+                            Email : <a style={{opacity:0.5, color:"black"}} href='mailto:elas@hyderabad.bits-pilani.ac.in'>elas@hyderabad.bits-pilani.ac.in</a>
                         </div>
                         <div className='card-desc'>
-                            Phone : <a style={{opacity:0.5, color:"rgb(60, 10, 8)"}} href="phone:1234GETONTHEDANCEFLOOR">1234GETONTHEDANCEFLOOR</a>
+                            Phone : <a style={{opacity:0.5, color:"black"}} href="phone:1234GETONTHEDANCEFLOOR">1234GETONTHEDANCEFLOOR</a>
                         </div>
                         </div>
                     </div>
@@ -187,6 +198,40 @@ const TitleComponent = () => {
                     </Animator>
                 </ScrollPage></section>
             </ScrollContainer>
+    )
+}
+
+const EventDetail = ({name, time, desc, setEventShown, onClickOutside}) => {
+    const ref = useRef(null);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+            onClickOutside && onClickOutside();
+            }
+        };
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+            document.removeEventListener('click', handleClickOutside, true);
+        };
+    }, [ onClickOutside ]);
+    return(
+        <div ref={ref} className='event-detail-card'>
+            <div className='detail-title'>
+                {name}
+            </div>
+            <div className='detail-time'>
+                TIME : {time}
+            </div>
+            <div className='detail-desc'>
+                {desc}
+            </div>
+            <button className='exit' onClick={(e)=>{
+                e.preventDefault();
+                setEventShown(false);
+            }}>
+                CLOSE
+            </button>
+        </div>
     )
 }
 

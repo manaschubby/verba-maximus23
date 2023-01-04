@@ -3,7 +3,7 @@ const NavBar = () => {
     return (
         <div className='navbar'>
 
-            <a href='#main' relative="path"><img src="/VM.jpeg" className='logo'/></a>
+            <a href='#main' relative="path"><img src="/metamorphosisLogo.svg" className='logo'/></a>
             <div className='headers'>
                 <div className='element'> 
                     <a href='#main'>Home</a>
