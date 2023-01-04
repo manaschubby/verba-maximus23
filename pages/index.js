@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import styles from '../styles/Home.module.css'
 import LandingPage from './Components/LandingPage'
 import NavBar from './Components/NavBar/NavBar'
