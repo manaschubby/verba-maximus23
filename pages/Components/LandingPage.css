@@ -35,9 +35,8 @@
     background-size: cover;
     background-position: center;
     image-rendering: optimizeSpeed;
-    background-image: url("/metamorphosisLogo.svg");
+    background-image: url("/metamorphosisLogo copy.svg");
     background-repeat: no-repeat;
-    filter: invert(100%);
 }
 .landing-events{
     margin-top: 10vh;
@@ -103,7 +102,7 @@
     top: 10vh;
     bottom: 10vh;
     width: 80vw;
-    height: 80vh;
+    height: max(80vh, fit-content);
     position: fixed;
     background-color: var(--color2);
     display: flex;
@@ -133,6 +132,7 @@
     color: white;
 }
 .exit{
+    text-align: center;
     margin-top: 5vh;
     font-size: large;
     height: 10vh;
@@ -157,6 +157,8 @@
         width: 400px;
     }
     .exit{
-        width: 10vh;
+        width: fit-content;
+        height: max-content;
+        padding: 3vw;
     }
 }

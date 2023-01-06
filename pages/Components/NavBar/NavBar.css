@@ -5,7 +5,7 @@
 }
 .navbar{
     width: 100vw;
-    height: 7vw;
+    height: 5vw;
     background-color: white;
     position: fixed;
     top:0;
@@ -16,8 +16,8 @@
     z-index: 100;
 }
 .logo{
-    width: 7vw;
-    height: 7vw;
+    width: 5vw;
+    height: 5vw;
     position: relative;
     left: 5vh;
 }
@@ -36,7 +36,9 @@
 }
 .register{
     margin-left: 2vw;
-    padding: 1vw 2vw;
+    padding: 0.7vw 2vw;
+    display: flex;
+    align-items: center;
     background-color: var(--color2);
     color: var(--color1);
     -webkit-backdrop-filter: blur(10px);
