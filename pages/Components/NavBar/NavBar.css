@@ -9,34 +9,36 @@
     background-color: white;
     position: fixed;
     top:0;
-    left:0;
     display: flex;
     flex-direction: row;
     box-shadow: 0px 0px 20px var(--color2Blur);
     z-index: 100;
+    justify-content: space-between;
 }
+
 .logo{
     width: 5vw;
     height: 5vw;
     position: relative;
-    left: 5vh;
+    left: 5vw;
 }
+
 .headers{
-    margin-left: 40vw;
     display: flex;
-    width: 50vw;
+    width: 35vw;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
+
 .element{
     color: var(--color2);
     font-size: 1.8vw;
-    
 }
+
 .register{
-    margin-left: 2vw;
-    padding: 0.7vw 2vw;
+    margin-left: 1vw;
+    padding: 0.7vw 1vw;
     display: flex;
     align-items: center;
     background-color: var(--color2);
@@ -46,6 +48,7 @@
     border-radius: 10px;
     box-shadow: 0px 5px 20px var(--color2Blur);
 }
+
 @media (max-width: 1024px) {
     .navbar{
         height: 7vh;
