@@ -18,7 +18,7 @@ const LandingPage = () => {
     const events = [
         {
             title: "METAMORPHOSIS",
-            desc: `There has been a murder on campus. In this evolving case that has roped in eight separate individuals, confusion has been the only constant. You are our only shot at solving this murder mystery. Interrogate and cross-examine the eight suspects as you attempt to uncover the truth at SHERLOCKED, VM 2O22, and help us crack the case!`,
+            desc: `Our theme's titular event, METAMORPHOSIS. Play the role of Gregor Samsa (from Metamorphosis by Kafka) as participants write their way out of sticky situations and challenges that we throw in their way! As part of the OC, we will have to come up with different prompts and situations for the participants to write on.`,
             time: "at night"
         }, {
             title: "Sherlocked",
