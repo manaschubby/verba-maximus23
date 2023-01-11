@@ -79,7 +79,8 @@
 .card-title{
     padding-top: 30px;
     padding-bottom: 30px;
-    font-size: 40px;
+    font-size: 30px;
+    text-transform: uppercase !important;
 }
 .card-time{
     text-align: center;

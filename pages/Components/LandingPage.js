@@ -83,7 +83,7 @@ const LandingPage = () => {
                                     <b>TIME</b>: {event.time}
                                 </div>
                                 <div className='card-desc'>
-                                    {event.desc}
+                                    {event.desc.toString().slice(0, 100)}...
                                 </div>
                             </div>)
                         })}
@@ -115,9 +115,9 @@ const LandingPage = () => {
                             <div className='card-time'>
                                 Email : <a style={{ opacity: 0.5, color: "black" }} href='mailto:elas@hyderabad.bits-pilani.ac.in'>elas@hyderabad.bits-pilani.ac.in</a>
                             </div>
-                            <div className='card-desc'>
+                            {/* <div className='card-desc'>
                                 Phone : <a style={{ opacity: 0.5, color: "black" }} href="phone:1234GETONTHEDANCEFLOOR">1234GETONTHEDANCEFLOOR</a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
