@@ -1,21 +1,21 @@
+import Link from 'next/link';
 import React from 'react';
 const NavBar = () => {
     return (
         <div className='navbar'>
-
-            <a href='#main' relative="path"><img src="/metamorphosisLogo.svg" className='logo'/></a>
+            <Link href='/#main' relative="path"><img src="/metamorphosisLogo.svg" className='logo'/></Link>
             <div className='headers'>
                 <div className='element'> 
-                    <a href='/#main'>Home</a>
+                    <Link href='/#main'>Home</Link>
                 </div>
                 <div className='element'>
-                    <a href='/events'>Events</a>
+                    <Link href='/events'>Events</Link>
                 </div>
                 <div className='element'>
-                    <a href='/#contact'>Contact Us</a>
+                    <Link href='/#contact'>Contact Us</Link>
                 </div>
                 <div className='element'>
-                    <a className='register' href='/#main'>Register</a>
+                    <Link className='register' href='/#main'>Register</Link>
                 </div>
             </div>
         </div>

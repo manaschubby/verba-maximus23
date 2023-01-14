@@ -14,7 +14,7 @@ const LandingPage = () => {
         <div>
             <section id="main"><TitleComponent /></section>
             <section id="contact">
-                <div className='landing-events' style={{ marginTop: "10vh", backgroundColor: "black" }} >
+                <div className='landing-contact' style={{backgroundColor: "black" }} >
                     <div className='sub-heading-title' style={{ fontSize: "8vh", color: "rgb(250, 200, 200)" }}>Contact Us</div>
                     <div style={
                         {
@@ -206,7 +206,7 @@ const TitleComponent = () => {
                         }
                     }></div>
                 </Animator> : <></>}
-                <Animator animation={batch(FadeIn(-0.5, 1), FadeOut(1, -0.3), Move(), Sticky(!isMobile ? 25 : 50, !isMobile ? 40 : 20))}>
+                <Animator animation={batch(FadeIn(-0.5, 1), FadeOut(1, !isMobile ? -0.5 : -0.3), Move(), Sticky(!isMobile ? 25 : 50, !isMobile ? 40 : 20))}>
                     <div style={{
                         display: "flex",
                         flexDirection: "column",
