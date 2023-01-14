@@ -6,16 +6,16 @@ const NavBar = () => {
             <a href='#main' relative="path"><img src="/metamorphosisLogo.svg" className='logo'/></a>
             <div className='headers'>
                 <div className='element'> 
-                    <a href='#main'>Home</a>
+                    <a href='/#main'>Home</a>
                 </div>
                 <div className='element'>
-                    <a href='#events'>Events</a>
+                    <a href='/events'>Events</a>
                 </div>
                 <div className='element'>
-                    <a href='#contact'>Contact Us</a>
+                    <a href='/#contact'>Contact Us</a>
                 </div>
                 <div className='element'>
-                    <a className='register' href='#main'>Register</a>
+                    <a className='register' href='/#main'>Register</a>
                 </div>
             </div>
         </div>
